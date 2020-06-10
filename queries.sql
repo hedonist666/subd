@@ -8,7 +8,7 @@ SELECT journal.start, journal.end, clients.name, instruments.type FROM journal
 SELECT * from instruments WHERE NOW() >= next_check;
 
 #3 drums
-SELECT instruments.id FROM instruments
+SELECT * FROM instruments
     WHERE instruments.type = 'drum' AND instruments.borrowed = TRUE;
 
 #4
