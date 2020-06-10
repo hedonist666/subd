@@ -21,7 +21,7 @@ JOIN instruments ON journal.instr_id = instruments.id;
 #6
 SELECT clients.* from journal
 JOIN clients on journal.client_id = clients.id
-WHERE journal.to < NOW();
+WHERE journal.end < NOW();
 
 #7
 SELECT * from instruments
