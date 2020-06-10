@@ -1,6 +1,6 @@
 USE Lyre;
 #1
-SELECT journal.from, journal.to, clients.name, instruments.type FROM journal
+SELECT journal.start, journal.end, clients.name, instruments.type FROM journal
     JOIN instruments on journal.instr_id = insteruments.id
     JOIN clients on journal.client_id = clients.id;
 
