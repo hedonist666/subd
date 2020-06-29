@@ -74,5 +74,5 @@ end;
 
 CREATE PROCEDURE TREE()
 begin
-    SELECT 0, 
+
 end;

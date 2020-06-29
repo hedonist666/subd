@@ -5,7 +5,7 @@ USE University;
 
 CREATE TABLE unit
 (
-  id INT NOT NULL PRIMARY KEY,
+  id INT NOT NULL UNIQUE PRIMARY KEY,
   type CHAR(30),
   upper_id INT,
   name CHAR(30)
@@ -13,7 +13,7 @@ CREATE TABLE unit
 
 CREATE TABLE employee
 (
-    id INT NOT NULL PRIMARY KEY,
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     unit_id INT,
     position CHAR(30),
     degree CHAR(30),
@@ -36,3 +36,9 @@ CREATE TABLE work
     end DATE,
     FOREIGN KEY (emp_id) REFERENCES employee(id)
 );
+
+INSERT INTO unit(id, type, upper_id, name) VALUES(1, 'university', NULL, 'spbu');
+INSERT INTO unit(id, type, upper_id, name) VALUES(2, 'faculty', NULL, 'math-mech');
+INSERT INTO unit(id, type, upper_id, name) VALUES(3, 'faculty', NULL, 'pmpu');
+
+INSERT INTO employee()

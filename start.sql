@@ -30,6 +30,9 @@ CREATE TABLE journal
     FOREIGN KEY (instr_id) REFERENCES instruments (id)
 );
 
-/* insertions
+/* insertions */
+INSERT INTO instruments(type, borrowed, next_check, price) VALUES('drum', FALSE, ADDTIME(NOW(), 100000), 15);
+INSERT INTO instruments(type, borrowed, next_check, price) VALUES('drum', FALSE, ADDTIME(NOW(), 200000), 20);
+INSERT INTO instruments(type, borrowed, next_check, price) VALUES('piano', FALSE, ADDTIME(NOW(), 300000), 30);
 
- */
+INSERT INTO clients(name, addr, number) VALUES('Vsevolod', 'saint-petersburg', '88005553535');
